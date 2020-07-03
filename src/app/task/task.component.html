@@ -1,0 +1,12 @@
+<div>
+  <div class="container">
+    <app-add-task (emitTask)="addNewTask($event)"></app-add-task>
+  </div>
+
+  <div class="container">
+    <app-active-task [activeTask]="activeTask" (finishTask)="finish($event)" (removeTask)="removeTask($event)"></app-active-task>
+    <app-finished-task [finishedTasks]="finishedTasks"></app-finished-task>
+  </div>
+</div>
+
+

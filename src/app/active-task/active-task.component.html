@@ -1,0 +1,13 @@
+<ng-container *ngIf="true; then activeTasksView; else noTasksView"></ng-container>
+
+<ng-template #activeTasksView>
+  <ng-container *ngFor="let task of activeTask">
+    <p>{{task.name}}</p>
+    <button (click)="remove(task)">Remove Task</button>
+    <button (click)="finish(task)">Finish Task</button>
+  </ng-container>
+</ng-template>
+
+<ng-template #noTasksView>
+  <p>Brak zadań, masz czas wolny!</p>
+</ng-template>
