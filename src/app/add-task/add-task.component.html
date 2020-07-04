@@ -1,6 +1,6 @@
 <form>
   <label>
-    <input [value]="newTask" type="text">
+    <input [(ngModel)]="newTask" type="text" name="newTask">
   </label>
   <button (click)="addNewTask()">Add new task</button>
 </form>

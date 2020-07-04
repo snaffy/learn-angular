@@ -1,6 +1,9 @@
 <div>
   <p>Finished task: {{finishedTasks.length}}</p>
-  <ng-container *ngFor="let finishedTask of finishedTasks">
-    <p>{{finishedTask.name}}</p>
-  </ng-container>
+  <ul>
+
+  </ul>
+  <li appChecked appDate [finishedDate]="finishedTask.finishedDate" *ngFor="let finishedTask of finishedTasks">
+    {{finishedTask.name}}
+  </li>
 </div>

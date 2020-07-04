@@ -9,6 +9,11 @@ import { TaskComponent } from './task/task.component';
 import { ActiveTaskComponent } from './active-task/active-task.component';
 import { FinishedTaskComponent } from './finished-task/finished-task.component';
 import { AddTaskComponent } from './add-task/add-task.component';
+import { RxTestComponent } from './rx-test/rx-test.component';
+import {TaskEmitterService} from './services/task-emitter.service';
+import {TaskService} from './services/task.service';
+import { CheckedDirective } from './shared/checked.directive';
+import { DateDirective } from './shared/date.directive';
 
 @NgModule({
   declarations: [
@@ -18,14 +23,17 @@ import { AddTaskComponent } from './add-task/add-task.component';
     TaskComponent,
     ActiveTaskComponent,
     FinishedTaskComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    RxTestComponent,
+    CheckedDirective,
+    DateDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [TaskEmitterService, TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

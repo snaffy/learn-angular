@@ -1,4 +1,4 @@
-<ng-container *ngIf="true; then activeTasksView; else noTasksView"></ng-container>
+<ng-container *ngIf="activeTask.length > 0; then activeTasksView; else noTasksView"></ng-container>
 
 <ng-template #activeTasksView>
   <ng-container *ngFor="let task of activeTask">
