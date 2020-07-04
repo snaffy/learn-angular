@@ -1,8 +1,8 @@
 <ng-container *ngIf="activeTask.length > 0; then activeTasksView; else noTasksView"></ng-container>
 
 <ng-template #activeTasksView>
-  <ng-container *ngFor="let task of activeTask">
-    <p>{{task.name}}</p>
+  <ng-container *ngFor="let task of activeTask | sort">
+    <p>{{task.name | transformTask: '!'}}</p>
     <button (click)="remove(task)">Remove Task</button>
     <button (click)="finish(task)">Finish Task</button>
   </ng-container>

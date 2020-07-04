@@ -16,8 +16,7 @@ export class ActiveTaskComponent implements OnInit {
 
   constructor(private taskEmitterService: TaskEmitterService, private taskService: TaskService) {
     taskService.getActiveTask().subscribe(value => {
-      this.activeTask = value;
-      console.log(this.activeTask);
+      this.activeTask = value.slice();
     });
 
   }

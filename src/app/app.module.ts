@@ -14,6 +14,8 @@ import {TaskEmitterService} from './services/task-emitter.service';
 import {TaskService} from './services/task.service';
 import { CheckedDirective } from './shared/checked.directive';
 import { DateDirective } from './shared/date.directive';
+import { TransformTaskPipe } from './shared/transform-task.pipe';
+import { SortPipe } from './shared/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { DateDirective } from './shared/date.directive';
     AddTaskComponent,
     RxTestComponent,
     CheckedDirective,
-    DateDirective
+    DateDirective,
+    TransformTaskPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
